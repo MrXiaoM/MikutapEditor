@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mikutap_Editor"
         mc:Ignorable="d"
-        Title="Mikutap 快捷编辑器 from 52pojie,cn" Height="205" Width="386" Closing="Window_Closing" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/icon.png" Loaded="Window_Loaded">
+        Title="Mikutap 快捷编辑器 from 吾爱破解 52pojie.cn" Height="205" Width="386" Closing="Window_Closing" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/icon.png" Loaded="Window_Loaded">
     <Grid>
         <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
             <Bold>> 用法</Bold> <LineBreak/>
