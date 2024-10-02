@@ -279,7 +279,12 @@ namespace CsharpJson
 		public JsonValue Value(int index)
 		{
 			return this.arrylist[index];
-		}
+        }
+
+        public override string ToString()
+        {
+            return JsonDocument.ToJsonString(this);
+        }
     }
 }
 

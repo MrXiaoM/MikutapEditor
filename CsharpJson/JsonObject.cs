@@ -216,5 +216,9 @@ namespace CsharpJson
             return this.items[key];
         }
 
+        public override string ToString()
+        {
+            return JsonDocument.ToJsonString(this);
+        }
     }
 }

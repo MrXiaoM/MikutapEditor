@@ -177,8 +177,10 @@ namespace Mikutap_Editor
             if (!DIR_TRACK.Exists) { msg("output/track 文件夹不存在!"); return; }
             if (!DIR_MAIN.Exists) { msg("output/main 文件夹不存在!"); return;}
 
-            File.WriteAllText(PATH_TRACK, LoadAudio(DIR_TRACK).ToString());
-            File.WriteAllText(PATH_MAIN, LoadAudio(DIR_MAIN).ToString());
+            JsonObject track = LoadAudio(DIR_TRACK);
+            JsonObject main = LoadAudio(DIR_MAIN);
+            File.WriteAllText(PATH_TRACK, track.ToString());
+            File.WriteAllText(PATH_MAIN, main.ToString());
 
             msg("打包完成!");
         }

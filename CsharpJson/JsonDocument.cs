@@ -44,7 +44,7 @@ namespace CsharpJson
 
         //默认字符串的平均最大长度
         //为了提高字符串的拼接性能，需要提前预估分配内存，避免StringBuild频繁申请内存
-        private readonly int DEFAULT_MAX_LENGHT = 40;
+        private static readonly int DEFAULT_MAX_LENGHT = 40;
         private JsonObject _object = null;
         private JsonArray array = null;
         private JsonEncoding encoding = JsonEncoding.Default;
@@ -280,7 +280,7 @@ namespace CsharpJson
         /// 将JsonObject序列化成字符串
         /// </summary>
         /// <returns>The json string.</returns>
-        private string ToJsonString(JsonObject items)
+        public static string ToJsonString(JsonObject items)
         {
             StringBuilder str = new StringBuilder(items.Count * 2 * DEFAULT_MAX_LENGHT);
             str.Append("{");
@@ -322,7 +322,7 @@ namespace CsharpJson
         /// </summary>
         /// <returns>The json string.</returns>
         /// <param name="arrylist">Arrylist.</param>
-        private string ToJsonString(JsonArray arrylist)
+        public static string ToJsonString(JsonArray arrylist)
         {
             StringBuilder str = new StringBuilder(arrylist.Count * DEFAULT_MAX_LENGHT);
             str.Append("[");
